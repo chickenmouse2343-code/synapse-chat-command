@@ -31,8 +31,10 @@ const Index = () => {
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">Features</a>
+            <a href="/algorithm" className="text-muted-foreground hover:text-primary transition-colors">Algorithm</a>
             <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors">How It Works</a>
             <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</a>
+            <Button variant="outline" className="btn-secondary">Contact Us</Button>
             <Button className="btn-hero">Get Started Free</Button>
           </div>
         </div>
@@ -76,6 +78,10 @@ const Index = () => {
               <Button size="lg" variant="outline" className="btn-secondary text-lg px-8 py-4">
                 <BarChart3 className="w-5 h-5 mr-2" />
                 See Features
+              </Button>
+              <Button size="lg" variant="outline" className="btn-secondary text-lg px-8 py-4">
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Contact Us
               </Button>
             </div>
             
@@ -297,13 +303,18 @@ const Index = () => {
       <section id="pricing" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Pricing</Badge>
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">Beta Pricing</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Find Your <span className="neon-text">Perfect Plan</span>
+              <span className="neon-text">Beta Access</span> Plans
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Flexible plans designed to fit every streamer, from hobbyists to professionals.
+              We're in beta! Limited GPU resources mean exclusive early access. Contact us for unlimited features.
             </p>
+            <div className="mt-4 p-4 bg-primary/10 rounded-lg max-w-2xl mx-auto">
+              <p className="text-sm text-primary font-medium">
+                🚀 Beta Phase: We're scaling our infrastructure. Some features have usage limits while we expand our GPU capacity.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -342,12 +353,13 @@ const Index = () => {
             {/* Pro Plan */}
             <Card className="feature-card border-primary/50 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-primary text-primary-foreground">Most Popular</Badge>
+                <Badge className="bg-primary text-primary-foreground">Beta Access</Badge>
               </div>
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">Pro</CardTitle>
+                <CardTitle className="text-2xl mb-2">Pro Beta</CardTitle>
                 <div className="text-4xl font-bold text-primary">$9.99</div>
                 <p className="text-muted-foreground">per month</p>
+                <Badge className="mt-2 bg-yellow-500/10 text-yellow-500 border-yellow-500/20">Limited GPU Access</Badge>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
@@ -357,7 +369,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Unlimited macros</span>
+                    <span>50 macros/day limit</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
@@ -369,31 +381,32 @@ const Index = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Priority support</span>
+                    <span>Beta support access</span>
                   </div>
                 </div>
                 <Button className="w-full btn-hero mt-6">
-                  Choose Pro
+                  Join Beta
                 </Button>
               </CardContent>
             </Card>
 
             {/* Enterprise Plan */}
-            <Card className="feature-card">
+            <Card className="feature-card border-2 border-primary/30">
               <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl mb-2">Enterprise</CardTitle>
-                <div className="text-4xl font-bold text-primary">$29.99</div>
-                <p className="text-muted-foreground">per month</p>
+                <CardTitle className="text-2xl mb-2 text-primary">Custom Enterprise</CardTitle>
+                <div className="text-4xl font-bold text-primary">Contact Us</div>
+                <p className="text-muted-foreground">Unlimited everything</p>
+                <Badge className="mt-2 bg-primary/10 text-primary border-primary/20">Full GPU Access</Badge>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Everything in Pro</span>
+                    <span>Unlimited AI processing</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Dedicated support</span>
+                    <span>Dedicated GPU allocation</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
@@ -401,15 +414,15 @@ const Index = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Priority feature access</span>
+                    <span>24/7 priority support</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>White-label options</span>
+                    <span>White-label & API access</span>
                   </div>
                 </div>
-                <Button className="w-full btn-secondary mt-6">
-                  Contact Sales
+                <Button className="w-full btn-hero mt-6">
+                  Contact Our Team
                 </Button>
               </CardContent>
             </Card>
